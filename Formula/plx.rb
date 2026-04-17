@@ -1,16 +1,16 @@
 class Plx < Formula
   desc "Dart CLI tool for project file monitoring and tooling automation"
   homepage "https://github.com/appboypov/homebrew-plx"
-  version "0.8.1"
+  version "0.10.0"
 
   on_macos do
-    url "https://github.com/appboypov/homebrew-plx/releases/download/v0.8.1/plx-macos-arm64"
-    sha256 "53231c02dc7e9484d930b9386c41ffd6111df0d25f07e9c8d7380d6acfda3994"
+    url "https://github.com/appboypov/homebrew-plx/releases/download/plx-v0.10.0/plx-macos-arm64"
+    sha256 "835f1ddd10063fcaef9af10299ad0e60c7985fb8d9d3fb3c5b1c41cb0cce00f1"
   end
 
   on_linux do
-    url "https://github.com/appboypov/homebrew-plx/releases/download/v0.8.1/plx-linux-x64"
-    sha256 "a3e7809547f56e087aab3fa1263157c2fbd822cc27026bd4404cacdfd6bb35e0"
+    url "https://github.com/appboypov/homebrew-plx/releases/download/plx-v0.10.0/plx-linux-x64"
+    sha256 "a4644ce9801336ef3188d2a146ffaad7db8bfca045cb32d6486bf4e79d947789"
   end
 
   def install

@@ -3,20 +3,20 @@ require "json"
 class Plx < Formula
   desc "Dart CLI tool for project file monitoring and tooling automation"
   homepage "https://github.com/appboypov/homebrew-plx"
-  version "0.35.0"
+  version "0.35.1"
   depends_on "python@3.12"
 
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
     url "https://github.com/appboypov/homebrew-plx/releases/download/plx-v#{version}/plx-macos-arm64.tar.gz"
-    sha256 "eeab6ed384bdca2bf41ffab614d713534c30cb45828c26579b8f85edffac7bea"
+    sha256 "d2b8fb45eec8c43ab2d6128e759aa279c9db993bec69a6d5a5947a7f588c9482"
   end
 
   on_linux do
     depends_on arch: :x86_64
     url "https://github.com/appboypov/homebrew-plx/releases/download/plx-v#{version}/plx-linux-x64.tar.gz"
-    sha256 "1b439c21453c8a430395aac777b16e6ef660c6d046f2bb94f452b9ac5ed5dd2a"
+    sha256 "dd3fd13cdf2fa0f5b5153e7f1af41c2b418fb5c7f21db201dc1ff4b5b36e8e5b"
   end
 
   def install

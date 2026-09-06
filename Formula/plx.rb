@@ -3,25 +3,26 @@ require "json"
 class Plx < Formula
   desc "Dart CLI tool for project file monitoring and tooling automation"
   homepage "https://github.com/appboypov/homebrew-plx"
-  version "0.33.0"
+  version "0.34.0"
+  depends_on "python@3.12"
 
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
     url "https://github.com/appboypov/homebrew-plx/releases/download/plx-v#{version}/plx-macos-arm64.tar.gz"
-    sha256 "9d08612dbde746c2bc58fe82644e1ac016b5495da598dfe4a73c0fbc8e5c93d9"
+    sha256 "30ca65b6699bfba85a26aaa61f660250e3b1aa67994cbc5c0e9f459257856ccc"
   end
 
   on_linux do
     depends_on arch: :x86_64
     url "https://github.com/appboypov/homebrew-plx/releases/download/plx-v#{version}/plx-linux-x64.tar.gz"
-    sha256 "535512ae665d957e27573f915f6b4bdd9ac5837e4c5fcc3a55064c43380c59ca"
+    sha256 "512c03ad152d21f6af07bd5d48b57bd1a3c9902658b8029c5ce8b68911c9a992"
   end
 
   def install
     bin.install "bin/plx"
     libexec.install Dir["libexec/*"]
-    (share/"licenses").install "share/licenses/plx-context-runtime"
+    (share/"licenses").install Dir["share/licenses/*"]
     (share/"plx").install "share/plx/context-runtime.json"
   end
 
